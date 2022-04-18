@@ -186,22 +186,8 @@
    }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ***************************** */
-/* Animation Section: Train Car1 */
+/* Animation Section: Train Car2 */
 /* ***************************** */
 
 .trainCarPoP2{
@@ -297,3 +283,73 @@
    animation-timing-function: linear;
    }
 }
+
+/* ******************************* */
+/* Animation Section: World Popins */
+/* ******************************* */
+
+.tower-fade-in{
+   transform: scale(0%) rotate(45deg) translate(-50%, -180%);
+   z-index: -15;
+   transform-origin: 0% 0%;
+   animation-name: pop-in-tower;
+   animation-duration: 1s;
+   transition: all;
+   animation-play-state: paused;
+   animation-delay: 1.8s;
+   display: none;
+}
+
+.violet:hover ~ .tower-fade-in {
+   animation-play-state: running;
+   display: inline;
+   
+}
+
+@keyframes pop-in-tower {
+
+   0%{
+   opacity: 0;
+   transform: scale(70%) rotate(45deg) translate(-50%, -180%);
+   }
+
+   100%{
+   opacity: 100;
+   transform: scale(70%) rotate(45deg) translate(-50%, -180%);
+   }
+}
+
+.tower-stay{
+   transform: scale(0%) rotate(45deg) translate(-50%, -180%);
+   z-index: -15;
+   transform-origin: 0% 0%;
+   animation-name: show-tower;
+   animation-duration: 1s;
+   transition: all;
+   animation-play-state: paused;
+   animation-delay: 2.79s;
+   animation-iteration-count: infinite;
+   display: none;
+}
+
+.violet:hover ~ .tower-stay {
+   animation-play-state: running;
+   display: inline;
+   
+}
+
+@keyframes show-tower {
+
+   0%{
+   opacity: 100;
+   transform: scale(70%) rotate(45deg) translate(-50%, -180%);
+   display: inline;
+   }
+
+   100%{
+   opacity: 100;
+   transform: scale(70%) rotate(45deg) translate(-50%, -180%);
+   display: inline;
+   }
+}
+
