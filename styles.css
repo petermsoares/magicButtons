@@ -285,7 +285,7 @@
 }
 
 /* ******************************* */
-/* Animation Section: World Popins */
+/* Animation Section: Tower        */
 /* ******************************* */
 
 .tower-fade-in{
@@ -352,4 +352,355 @@
    display: inline;
    }
 }
+
+/* ******************************* */
+/* Animation Section: Mountain     */
+/* ******************************* */
+
+.mountain-fade-in{
+   transform: scale(0%) rotate(120deg) translate(-50%, -175%);
+   z-index: -15;
+   transform-origin: 0% 0%;
+   animation-name: pop-in-mountain;
+   animation-duration: 1s;
+   transition: all;
+   animation-play-state: paused;
+   animation-delay: 4s;
+   display: none;
+}
+
+.violet:hover ~ .mountain-fade-in {
+   animation-play-state: running;
+   display: inline;
+   
+}
+
+@keyframes pop-in-mountain {
+
+   0%{
+   opacity: 0;
+   transform: scale(70%) rotate(135deg) translate(-50%, -175%);
+   }
+
+   100%{
+   opacity: 100;
+   transform: scale(70%) rotate(135deg) translate(-50%, -175%);
+   }
+}
+
+.mountain-stay{
+   transform: scale(0%) rotate(135deg) translate(-50%, -175%);
+   z-index: -15;
+   transform-origin: 0% 0%;
+   animation-name: show-mountain;
+   animation-duration: 1s;
+   transition: all;
+   animation-play-state: paused;
+   animation-delay: 4.99s;
+   animation-iteration-count: infinite;
+   display: none;
+}
+
+.violet:hover ~ .mountain-stay {
+   animation-play-state: running;
+   display: inline;
+   
+}
+
+@keyframes show-mountain {
+
+   0%{
+   opacity: 100;
+   transform: scale(70%) rotate(135deg) translate(-50%, -175%);
+   display: inline;
+   }
+
+   100%{
+   opacity: 100;
+   transform: scale(70%) rotate(135deg) translate(-50%, -175%);
+   display: inline;
+   }
+}
+
+/* ******************************* */
+/* Animation Section: croissant    */
+/* ******************************* */
+
+.cro-fade-in{
+   transform: scale(0%) rotate(215deg) translate(-50%, -210%);
+   z-index: -15;
+   transform-origin: 0% 0%;
+   animation-name: pop-in-cro;
+   animation-duration: 1s;
+   transition: all;
+   animation-play-state: paused;
+   animation-delay: 6.0s;
+   display: none;
+}
+
+.violet:hover ~ .cro-fade-in {
+   animation-play-state: running;
+   display: inline;
+   
+}
+
+@keyframes pop-in-cro {
+
+   0%{
+   opacity: 0;
+   transform: scale(50%) rotate(215deg) translate(-50%, -210%);
+   }
+
+   100%{
+   opacity: 100;
+   transform: scale(50%) rotate(215deg) translate(-50%, -210%);
+   }
+}
+
+.cro-stay{
+   transform: scale(0%) rotate(215deg) translate(-50%, -210%);
+   z-index: -15;
+   transform-origin: 0% 0%;
+   animation-name: show-cro;
+   animation-duration: 1s;
+   transition: all;
+   animation-play-state: paused;
+   animation-delay: 6.9s;
+   animation-iteration-count: infinite;
+   display: none;
+}
+
+.violet:hover ~ .cro-stay {
+   animation-play-state: running;
+   display: inline;
+   
+}
+
+@keyframes show-cro {
+
+   0%{
+   opacity: 100;
+   transform: scale(50%) rotate(215deg) translate(-50%, -210%);
+   display: inline;
+   }
+
+   100%{
+   opacity: 100;
+   transform: scale(50%) rotate(215deg) translate(-50%, -210%);
+   display: inline;
+   }
+}
+
+
+/* ******************************* */
+/* Animation Section: Bread        */
+/* ******************************* */
+
+.bread-fade-in{
+   transform: scale(0%) rotate(200deg) translate(-50%, -230%);
+   z-index: -20;
+   transform-origin: 0% 0%;
+   animation-name: pop-in-bread;
+   animation-duration: 1s;
+   transition: all;
+   animation-play-state: paused;
+   animation-delay: 6.5s;
+   display: none;
+}
+
+.violet:hover ~ .bread-fade-in {
+   animation-play-state: running;
+   display: inline;
+   
+}
+
+@keyframes pop-in-bread {
+
+   0%{
+   opacity: 0;
+   transform: scale(50%) rotate(195deg) translate(-50%, -230%);
+   }
+
+   100%{
+   opacity: 100;
+   transform: scale(50%) rotate(195deg) translate(-50%, -230%);
+   }
+}
+
+.bread-stay{
+   transform: scale(0%) rotate(195deg) translate(-50%, -230%);
+   z-index: -20;
+   transform-origin: 0% 0%;
+   animation-name: show-bread;
+   animation-duration: 1s;
+   transition: all;
+   animation-play-state: paused;
+   animation-delay: 7.49s;
+   animation-iteration-count: infinite;
+   display: none;
+}
+
+.violet:hover ~ .bread-stay {
+   animation-play-state: running;
+   display: inline;
+   
+}
+
+@keyframes show-bread {
+
+   0%{
+   opacity: 100;
+   transform: scale(50%) rotate(195deg) translate(-50%, -230%);
+   display: inline;
+   }
+
+   100%{
+   opacity: 100;
+   transform: scale(50%) rotate(195deg) translate(-50%, -230%);
+   display: inline;
+   }
+}
+
+/* ******************************* */
+/* Animation Section: Wine         */
+/* ******************************* */
+
+.wine-fade-in{
+   transform: scale(0%) rotate(235deg) translate(-50%, -230%);
+   z-index: -11;
+   transform-origin: 0% 0%;
+   animation-name: pop-in-wine;
+   animation-duration: 1s;
+   transition: all;
+   animation-play-state: paused;
+   animation-delay: 7s;
+   display: none;
+}
+
+.violet:hover ~ .wine-fade-in {
+   animation-play-state: running;
+   display: inline;
+   
+}
+
+@keyframes pop-in-wine {
+
+   0%{
+   opacity: 0;
+   transform: scale(50%) rotate(235deg) translate(-50%, -230%);
+   }
+
+   100%{
+   opacity: 100;
+   transform: scale(50%) rotate(235deg) translate(-50%, -230%);
+   }
+}
+
+.wine-stay{
+   transform: scale(0%) rotate(235deg) translate(-50%, -230%);
+   z-index: -11;
+   transform-origin: 0% 0%;
+   animation-name: show-wine;
+   animation-duration: 1s;
+   transition: all;
+   animation-play-state: paused;
+   animation-delay: 7.99s;
+   animation-iteration-count: infinite;
+   display: none;
+}
+
+.violet:hover ~ .wine-stay {
+   animation-play-state: running;
+   display: inline;
+   
+}
+
+@keyframes show-wine {
+
+   0%{
+   opacity: 100;
+   transform: scale(50%) rotate(235deg) translate(-50%, -230%);
+   display: inline;
+   }
+
+   100%{
+   opacity: 100;
+   transform: scale(50%) rotate(235deg) translate(-50%, -230%);
+   display: inline;
+   }
+}
+
+/* ******************************* */
+/* Animation Section: Notre Dame   */
+/* ******************************* */
+
+.not-fade-in{
+   transform: scale(0%) rotate(315deg) translate(-50%, -175%);
+   z-index: -11;
+   transform-origin: 0% 0%;
+   animation-name: pop-in-not;
+   animation-duration: 1s;
+   transition: all;
+   animation-play-state: paused;
+   animation-delay: 8s;
+   display: none;
+}
+
+.violet:hover ~ .not-fade-in {
+   animation-play-state: running;
+   display: inline;
+   
+}
+
+@keyframes pop-in-not {
+
+   0%{
+   opacity: 0;
+   transform: scale(80%) rotate(315deg) translate(-50%, -180%);
+   }
+
+   100%{
+   opacity: 100;
+   transform: scale(80%) rotate(315deg) translate(-50%, -180%);
+   }
+}
+
+.not-stay{
+   transform: scale(0%) rotate(315deg) translate(-50%, -180%);
+   z-index: -11;
+   transform-origin: 0% 0%;
+   animation-name: show-not;
+   animation-duration: 1s;
+   transition: all;
+   animation-play-state: paused;
+   animation-delay: 8.99s;
+   animation-iteration-count: infinite;
+   display: none;
+}
+
+.violet:hover ~ .not-stay {
+   animation-play-state: running;
+   display: inline;
+   
+}
+
+@keyframes show-not {
+
+   0%{
+   opacity: 100;
+   transform: scale(80%) rotate(315deg) translate(-50%, -180%);
+   display: inline;
+   }
+
+   100%{
+   opacity: 100;
+   transform: scale(80%) rotate(315deg) translate(-50%, -180%);
+   display: inline;
+   }
+}
+
+
+
+
+
 
