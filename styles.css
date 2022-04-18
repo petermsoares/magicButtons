@@ -5,14 +5,6 @@
    /* border: 1px solid red; */
 }
 
-.red-ball {
-   width: 25px;
-   height: 25px;
-   border-radius: 50%;
-   z-index: 5;
-   color: red;
-   background: red;
-}
 
 .button-content {
    position: relative;
@@ -40,39 +32,152 @@
    animation-name: rotate;
    animation-duration: 4s;
    animation-iteration-count: infinite;
-   /* background-color: rgb(201, 201, 201); */
    transition: all;
    animation-play-state: paused;
    display: none;
 }
+
+
+/* Hover over animations below*/
 
 .violet:hover ~ .arrow-rotation {
    animation-play-state: running;
    display: inline;
 }
 
-@keyframes rotate {
+/* ******************************* */
+/* Animation Section: Train Tracks */
+/* ******************************* */
+
+.trainTracks {
+   transform: scale(140%) translate(-50%, -50%);
+   transform-origin: 0% 0%;
+   animation-name: pop-in;
+   animation-duration: 4s;
+   transition: all;
+   animation-play-state: paused;
+   display: none;
+}
+
+.violet:hover ~ .trainTracks {
+   animation-play-state: running;
+   display: inline;
+}
+
+@keyframes pop-in{
+
+0% {
+   transform: scale(0%) translate(-50%, -50%);
+   transform-origin: 0% 0%;
+}
+
+10% {
+   transform: scale(145%) translate(-50%, -50%);
+   transform-origin: 0% 0%;
+}
+
+20% {
+   transform: scale(140%) translate(-50%, -50%);
+   transform-origin: 0% 0%;
+}
+
+100% {
+   transform: scale(140%) translate(-50%, -50%);
+   transform-origin: 0% 0%;
+}
+
+}
+
+/* **************************** */
+/* Animation Section: Train Car */
+/* **************************** */
+
+.trainCarPoP{
+   transform: scale(30%) translate(-50%, -50%);
+   transform-origin: 0% 0%; 
+   z-index: -10;
+   animation-name: car1-popin;
+   animation-duration: 10s;
+   transition: all;
+   animation-play-state: paused;
+   display:none;
+}
+
+.violet:hover ~ .trainCarPoP {
+   animation-play-state: running;
+   display: inline;
+}
+
+@keyframes car1-popin {
+
+   0%{
+   transform: scale(0%) rotate(1deg) translate(-50%, -900%);
+   transform-origin: 0% 0%; 
+   }
+
+   5%{
+   transform: scale(32%) rotate(1deg) translate(-50%, -900%);
+   transform-origin: 0% 0%; 
+   }
+
+   8%{
+   transform: scale(30%) rotate(1deg) translate(-50%, -900%);
+   transform-origin: 0% 0%; 
+   animation-timing-function: linear;
+   opacity: 1;
+   }
+
+   10% {
+   transform: scale(30%) rotate(1deg) translate(-50%, -900%);
+   transform-origin: 0% 0%; 
+   animation-timing-function: linear;
+      opacity: 1;
+   }
+
+   11% {
+   transform: scale(30%) rotate(1deg) translate(-50%, -900%);
+   transform-origin: 0% 0%; 
+   animation-timing-function: linear;
+      opacity: 0;
+   }
+
+   100%{
+   transform: scale(30%) rotate(1deg) translate(-50%, -900%);
+   transform-origin: 0% 0%; 
+   animation-timing-function: linear;
+      opacity: 0;
+   }
+} 
+
+.trainCarRotate {
+   transform: scale(30%) translate(-50%, -50%);
+   transform-origin: 0% 0%; 
+   z-index: -10;
+   animation-name: rotate-car;
+   animation-duration: 10s;
+   animation-iteration-count: infinite;
+   animation-delay: 1s;
+   transition: all;
+   animation-play-state: paused;
+   display:none;
+}
+
+.violet:hover ~ .trainCarRotate {
+   animation-play-state: running;
+   display: inline;
+}
+
+@keyframes rotate-car {
+
    0% {
-      transform: scale(0) translate(-50%, -50%);
-      transform-origin: 0% 0%;
+   transform: scale(30%) rotate(1deg) translate(-50%, -900%);
+   transform-origin: 0% 0%; 
+   animation-timing-function: linear;
    }
 
-   4% {
-      transform: scale(2.2) translate(-50%, -50%);
-      transform-origin: 0% 0%;
-   }
-
-   6% {
-      transform: scale(2) translate(-50%, -50%);
-      transform-origin: 0% 0%;
-   }
-
-   20% {
-      transform: scale(2) rotate(360deg) translate(-50%, -50%);
-      transform-origin: 0% 0%;
-   }
    100% {
-      transform: scale(2) rotate(0deg) translate(-50%, -50%);
-      transform-origin: 0% 0%;
+   transform: scale(30%) rotate(360deg) translate(-50%, -900%);
+   transform-origin: 0% 0%; 
+   animation-timing-function: linear;
    }
 }
