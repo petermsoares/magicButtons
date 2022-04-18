@@ -52,7 +52,7 @@
 .trainTracks {
    transform: scale(140%) translate(-50%, -50%);
    transform-origin: 0% 0%;
-   animation-name: pop-in;
+   animation-name: pop-in-tracks;
    animation-duration: 4s;
    transition: all;
    animation-play-state: paused;
@@ -64,7 +64,7 @@
    display: inline;
 }
 
-@keyframes pop-in{
+@keyframes pop-in-tracks{
 
 0% {
    transform: scale(0%) translate(-50%, -50%);
@@ -88,11 +88,11 @@
 
 }
 
-/* **************************** */
-/* Animation Section: Train Car */
-/* **************************** */
+/* ***************************** */
+/* Animation Section: Train Car1 */
+/* ***************************** */
 
-.trainCarPoP{
+.trainCarPoP1{
    transform: scale(30%) translate(-50%, -50%);
    transform-origin: 0% 0%; 
    z-index: -10;
@@ -103,53 +103,55 @@
    display:none;
 }
 
-.violet:hover ~ .trainCarPoP {
+.violet:hover ~ .trainCarPoP1 {
    animation-play-state: running;
    display: inline;
 }
 
+/* This animation controls the pop-in effect of car1 */
+
 @keyframes car1-popin {
 
    0%{
-   transform: scale(0%) rotate(1deg) translate(-50%, -900%);
+   transform: scale(0%) rotate(0deg) translate(-50%, -900%);
    transform-origin: 0% 0%; 
    }
 
    5%{
-   transform: scale(32%) rotate(1deg) translate(-50%, -900%);
+   transform: scale(32%) rotate(0deg) translate(-50%, -900%);
    transform-origin: 0% 0%; 
    }
 
    8%{
-   transform: scale(30%) rotate(1deg) translate(-50%, -900%);
+   transform: scale(30%) rotate(0deg) translate(-50%, -900%);
    transform-origin: 0% 0%; 
    animation-timing-function: linear;
    opacity: 1;
    }
 
    10% {
-   transform: scale(30%) rotate(1deg) translate(-50%, -900%);
+   transform: scale(30%) rotate(0deg) translate(-50%, -900%);
    transform-origin: 0% 0%; 
    animation-timing-function: linear;
       opacity: 1;
    }
 
-   11% {
-   transform: scale(30%) rotate(1deg) translate(-50%, -900%);
+   10.1% {
+   transform: scale(30%) rotate(0deg) translate(-50%, -900%);
    transform-origin: 0% 0%; 
    animation-timing-function: linear;
       opacity: 0;
    }
 
    100%{
-   transform: scale(30%) rotate(1deg) translate(-50%, -900%);
+   transform: scale(30%) rotate(0deg) translate(-50%, -900%);
    transform-origin: 0% 0%; 
    animation-timing-function: linear;
       opacity: 0;
    }
 } 
 
-.trainCarRotate {
+.trainCarRotate1 {
    transform: scale(30%) translate(-50%, -50%);
    transform-origin: 0% 0%; 
    z-index: -10;
@@ -162,21 +164,135 @@
    display:none;
 }
 
-.violet:hover ~ .trainCarRotate {
+.violet:hover ~ .trainCarRotate1 {
    animation-play-state: running;
    display: inline;
 }
 
+/* This animation controls the rotation effect of car1 */
+
 @keyframes rotate-car {
 
    0% {
-   transform: scale(30%) rotate(1deg) translate(-50%, -900%);
+   transform: scale(30%) rotate(0deg) translate(-50%, -900%);
    transform-origin: 0% 0%; 
    animation-timing-function: linear;
    }
 
    100% {
    transform: scale(30%) rotate(360deg) translate(-50%, -900%);
+   transform-origin: 0% 0%; 
+   animation-timing-function: linear;
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ***************************** */
+/* Animation Section: Train Car1 */
+/* ***************************** */
+
+.trainCarPoP2{
+   transform: scale(30%) translate(-50%, -50%);
+   transform-origin: 0% 0%; 
+   z-index: -10;
+   animation-name: car2-popin;
+   animation-duration: 10s;
+   transition: all;
+   animation-play-state: paused;
+   display:none;
+}
+
+.violet:hover ~ .trainCarPoP2 {
+   animation-play-state: running;
+   display: inline;
+}
+
+/* This animation controls the pop-in effect of car1 */
+
+@keyframes car2-popin {
+
+   0%{
+   transform: scale(0%) rotate(335deg) translate(-50%, -900%);
+   transform-origin: 0% 0%; 
+   }
+
+   5%{
+   transform: scale(32%) rotate(335deg) translate(-50%, -900%);
+   transform-origin: 0% 0%; 
+   }
+
+   8%{
+   transform: scale(30%) rotate(335deg) translate(-50%, -900%);
+   transform-origin: 0% 0%; 
+   animation-timing-function: linear;
+   opacity: 1;
+   }
+
+   10% {
+   transform: scale(30%) rotate(335deg) translate(-50%, -900%);
+   transform-origin: 0% 0%; 
+   animation-timing-function: linear;
+      opacity: 1;
+   }
+
+   10.1% {
+   transform: scale(30%) rotate(335deg) translate(-50%, -900%);
+   transform-origin: 0% 0%; 
+   animation-timing-function: linear;
+      opacity: 0;
+   }
+
+   100%{
+   transform: scale(30%) rotate(335deg) translate(-50%, -900%);
+   transform-origin: 0% 0%; 
+   animation-timing-function: linear;
+      opacity: 0;
+   }
+} 
+
+.trainCarRotate2 {
+   transform: scale(30%) translate(-50%, -50%);
+   transform-origin: 0% 0%; 
+   z-index: -10;
+   animation-name: rotate-car-2;
+   animation-duration: 10s;
+   animation-iteration-count: infinite;
+   animation-delay: 1s;
+   transition: all;
+   animation-play-state: paused;
+   display:none;
+}
+
+.violet:hover ~ .trainCarRotate2 {
+   animation-play-state: running;
+   display: inline;
+}
+
+/* This animation controls the rotation effect of car1 */
+
+@keyframes rotate-car-2 {
+
+   0% {
+   transform: scale(30%) rotate(335deg) translate(-50%, -900%);
+   transform-origin: 0% 0%; 
+   animation-timing-function: linear;
+   }
+
+   100% {
+   transform: scale(30%) rotate(695deg) translate(-50%, -900%);
    transform-origin: 0% 0%; 
    animation-timing-function: linear;
    }
