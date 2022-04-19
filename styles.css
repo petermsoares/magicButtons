@@ -5,16 +5,6 @@
    /* border: 1px solid red; */
 }
 
-
-.button-content {
-   position: relative;
-   /* background-color: grey; */
-   margin: 0 auto;
-   height: 400px;
-   width: 400px;
-   z-index: -50;
-}
-
 .center-content {
    position: absolute;
    top: 50%;
@@ -23,18 +13,23 @@
 }
 
 .violet {
-   border: 3px solid rgb(2, 0, 133);
+   width: 170px;
+   height: 170px;
+   font-size:26px;
+   color: white;
+   background-color: rgb(155, 130, 97);
+   border: 3px solid rgb(155, 130, 97);
    border-radius: 50%;
    z-index: 10;
+   transition: 500ms ease;
 }
 
-.arrow-rotation {
-   animation-name: rotate;
-   animation-duration: 4s;
-   animation-iteration-count: infinite;
-   transition: all;
-   animation-play-state: paused;
-   display: none;
+.violet:hover {
+   color: rgb(155, 130, 97);
+   background-color: white;
+   border: 3px solid rgb(155, 130, 97);
+
+
 }
 
 
@@ -50,6 +45,7 @@
 /* ******************************* */
 
 .trainTracks {
+   z-index: -1;
    transform: scale(140%) translate(-50%, -50%);
    transform-origin: 0% 0%;
    animation-name: pop-in-tracks;
@@ -95,7 +91,7 @@
 .trainCarPoP1{
    transform: scale(30%) translate(-50%, -50%);
    transform-origin: 0% 0%; 
-   z-index: -10;
+   z-index: -5;
    animation-name: car1-popin;
    animation-duration: 10s;
    transition: all;
@@ -154,7 +150,7 @@
 .trainCarRotate1 {
    transform: scale(30%) translate(-50%, -50%);
    transform-origin: 0% 0%; 
-   z-index: -10;
+   z-index: -5;
    animation-name: rotate-car;
    animation-duration: 10s;
    animation-iteration-count: infinite;
@@ -193,7 +189,7 @@
 .trainCarPoP2{
    transform: scale(30%) translate(-50%, -50%);
    transform-origin: 0% 0%; 
-   z-index: -10;
+   z-index: -5;
    animation-name: car2-popin;
    animation-duration: 10s;
    transition: all;
@@ -252,7 +248,7 @@
 .trainCarRotate2 {
    transform: scale(30%) translate(-50%, -50%);
    transform-origin: 0% 0%; 
-   z-index: -10;
+   z-index: -5;
    animation-name: rotate-car-2;
    animation-duration: 10s;
    animation-iteration-count: infinite;
@@ -290,7 +286,7 @@
 
 .tower-fade-in{
    transform: scale(0%) rotate(45deg) translate(-50%, -180%);
-   z-index: -15;
+   z-index: -10;
    transform-origin: 0% 0%;
    animation-name: pop-in-tower;
    animation-duration: 1s;
@@ -321,7 +317,7 @@
 
 .tower-stay{
    transform: scale(0%) rotate(45deg) translate(-50%, -180%);
-   z-index: -15;
+   z-index: -10;
    transform-origin: 0% 0%;
    animation-name: show-tower;
    animation-duration: 1s;
@@ -698,6 +694,138 @@
    display: inline;
    }
 }
+
+/* ******************************* */
+/* Animation Section: Cloud1 Animation   */
+/* ******************************* */
+
+.cloud1-fade-in{
+   transform: scale(0%) rotate(25deg) translate(-50%, -550%);
+   z-index: -11;
+   transform-origin: 0% 0%;
+   animation-name: pop-in-cloud1;
+   animation-duration: 14s;
+   transition: all;
+   animation-play-state: paused;
+   animation-delay: 1.5s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+   display: none;
+}
+
+.violet:hover ~ .cloud1-fade-in {
+   animation-play-state: running;
+   display: inline;
+   
+}
+
+@keyframes pop-in-cloud1 {
+
+   0%{
+   opacity: 0;
+   transform: scale(30%) rotate(25deg) translate(-50%, -550%);
+   }
+
+   50%{
+   opacity: 100;
+   transform: scale(30%) rotate(65deg) translate(-50%, -550%);
+
+   }
+
+   100%{
+   opacity: 0;
+   transform: scale(30%) rotate(95deg) translate(-50%, -550%);
+   }
+}
+
+/* ******************************* */
+/* Animation Section: Cloud2 Animation   */
+/* ******************************* */
+
+.cloud2-fade-in{
+   transform: scale(0%) rotate(140deg) translate(-50%, -550%);
+   z-index: -11;
+   transform-origin: 0% 0%;
+   animation-name: pop-in-cloud2;
+   animation-duration: 6s;
+   transition: all;
+   animation-play-state: paused;
+   animation-delay: 4s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+   display: none;
+}
+
+.violet:hover ~ .cloud2-fade-in {
+   animation-play-state: running;
+   display: inline;
+   
+}
+
+@keyframes pop-in-cloud2 {
+
+   0%{
+   opacity: 0;
+   transform: scale(35%) rotate(140deg) translate(-50%, -550%);
+   }
+
+   50%{
+   opacity: 100;
+   transform: scale(35%) rotate(130deg) translate(-50%, -550%);
+
+   }
+
+   100%{
+   opacity: 0;
+   transform: scale(35%) rotate(120deg) translate(-50%, -550%);
+   }
+}
+
+/* ******************************* */
+/* Animation Section: Cloud3 Animation   */
+/* ******************************* */
+
+.cloud3-fade-in{
+   transform: scale(0%) rotate(250deg) translate(-50%, -580%);
+   z-index: -50;
+   transform-origin: 0% 0%;
+   animation-name: pop-in-cloud3;
+   animation-duration: 28s;
+   transition: all;
+   animation-play-state: paused;
+   animation-delay: 7.5s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+   display: none;
+}
+
+.violet:hover ~ .cloud3-fade-in {
+   animation-play-state: running;
+   display: inline;
+   
+}
+
+@keyframes pop-in-cloud3 {
+
+   0%{
+   opacity: 0;
+   transform: scale(45%) rotate(250deg) translate(-50%, -550%);
+   }
+
+   50%{
+   opacity: 100;
+   transform: scale(45%) rotate(350deg) translate(-50%, -550%);
+
+   }
+
+   100%{
+   opacity: 0;
+   transform: scale(45%) rotate(450deg) translate(-50%, -550%);
+   }
+}
+
+
+
 
 
 
